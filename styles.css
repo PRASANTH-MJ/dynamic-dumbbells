@@ -312,3 +312,7 @@ form.sent + .form-success { display: block; }
   .form-card { padding: 24px 18px; }
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* When a hero photo is present, hide the fallback dumbbell graphic */
+.hero-photo ~ svg { display: none; }
+.hero-art:has(.hero-photo) { background: #000; }
