@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join &amp; Contact — Dynamic Dumbbells Gym, Coimbatore</title>
+  <meta name="description" content="Join Dynamic Dumbbells Gym, 86/1B Natha Thottam, Kovai Hills, Perur Chettipalayam, Coimbatore. Call +91 99944 78984. Membership registration, timings and FAQs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Join Dynamic Dumbbells Gym">
+  <meta property="og:description" content="4.9★ rated gym in Kovai Hills, Coimbatore — strength, CrossFit, Dynamic Diva women&#39;s studio &amp; personal training.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="theme-color" content="#0d0f12">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    details { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; }
+    details + details { margin-top: 12px; }
+    summary { cursor: pointer; font-weight: 600; font-size: 17px; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+    summary::after { content: "+"; color: var(--accent); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { color: var(--muted); margin-top: 10px; }
+  </style>
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero" style="padding-bottom:40px">
+      <div class="container" style="grid-template-columns:1fr">
+        <div>
+          <span class="eyebrow">Join now</span>
+          <h1>Start <em>today.</em></h1>
+          <p class="lead">Register for a membership or send us a question. Walk in any time during gym hours — we'd love to show you around.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CARDS -->
+    <section style="padding-top:0">
+      <div class="container">
+        <div class="grid grid-4">
+          <div class="card reveal" style="--accent:var(--men)"><div class="icon">♂</div><h3>Men's Gym</h3><p data-gym="menAddress"></p></div>
+          <div class="card reveal" style="--accent:var(--women)"><div class="icon">♀</div><h3>Dynamic Diva</h3><p>Dedicated women's studio — same address</p></div>
+          <div class="card reveal"><div class="icon">📞</div><h3>Call / WhatsApp</h3><p><a data-gym-tel data-gym="phone"></a></p></div>
+          <div class="card reveal"><div class="icon">⏰</div><h3>Timings</h3><p data-gym="hours"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGISTRATION FORM -->
+    <section class="form-section section-alt" id="join">
+      <div class="container">
+        <div>
+          <span class="eyebrow">Membership registration</span>
+          <h2>Become a <em>member</em></h2>
+          <p class="lead">Fill in your details to reserve your membership. Complete payment at the front desk or via UPI when you visit.</p>
+          <ul class="info-list">
+            <li><div class="icon">🪪</div><div><b>Bring on day one</b><span>ID proof + 1 passport photo</span></div></li>
+            <li><div class="icon">💳</div><div><b>Payment</b><span>Cash, UPI, cards accepted</span></div></li>
+            <li><div class="icon">🎁</div><div><b>Joining offer</b><span>Ask about this month's offer at the desk</span></div></li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <h3>Membership Registration</h3>
+          <p>All fields marked * are required.</p>
+          <form data-form="New Membership Registration" novalidate>
+            <div class="form-row">
+              <div class="field"><label for="c-name">Full name <span class="req">*</span></label><input id="c-name" name="Name" required autocomplete="name"><span class="error">Please enter your name</span></div>
+              <div class="field"><label for="c-phone">Phone <span class="req">*</span></label><input id="c-phone" name="Phone" type="tel" required autocomplete="tel"><span class="error">Enter a valid phone number</span></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="c-email">Email</label><input id="c-email" name="Email" type="email" autocomplete="email"><span class="error">Enter a valid email</span></div>
+              <div class="field"><label for="c-dob">Date of birth</label><input id="c-dob" name="Date of birth" type="date"></div>
+            </div>
+            <div class="field">
+              <label>Gym <span class="req">*</span></label>
+              <div class="choice-group">
+                <label><input type="radio" name="Gym" value="Men's Gym" required> Men's Gym</label>
+                <label><input type="radio" name="Gym" value="Dynamic Diva (Women)"> Dynamic Diva (Women)</label>
+              </div>
+              <span class="error">Please choose a gym</span>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="c-plan">Membership plan <span class="req">*</span></label>
+                <select id="c-plan" name="Plan" required>
+                  <option value="">Select a plan</option><option>Monthly</option><option>Quarterly</option><option>Half-Yearly</option><option>Yearly</option>
+                </select><span class="error">Please choose a plan</span>
+              </div>
+              <div class="field"><label for="c-pt">Add personal training?</label>
+                <select id="c-pt" name="Personal training">
+                  <option>No</option><option>Fat Loss</option><option>Muscle Gain</option><option>Strength &amp; Powerlifting</option><option>Women's Fitness</option><option>Competition Prep</option><option>Rehab &amp; Mobility</option><option>Lifestyle Coaching</option><option>Online Coaching</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="c-start">Start date <span class="req">*</span></label><input id="c-start" name="Start date" type="date" required><span class="error">Pick a start date</span></div>
+              <div class="field"><label for="c-source">How did you hear about us?</label>
+                <select id="c-source" name="Source"><option>Instagram</option><option>Google</option><option>Friend / family</option><option>Walked past</option><option>Other</option></select>
+              </div>
+            </div>
+            <div class="field"><label for="c-msg">Message / questions</label><textarea id="c-msg" name="Message"></textarea></div>
+            <div class="field">
+              <div class="choice-group">
+                <label><input type="checkbox" name="Consent" value="Agreed" required> I confirm I'm fit to exercise and agree to the gym rules <span class="req">*</span></label>
+              </div>
+              <span class="error">Please confirm to continue</span>
+            </div>
+            <button class="btn btn-block" type="submit">Register Now</button>
+          </form>
+          <div class="form-success"><div class="tick">✓</div><h3>Welcome to the team<span data-name></span>!</h3><p>Your registration is ready on WhatsApp — hit send and we'll confirm your membership and start date.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP + FAQ -->
+    <section>
+      <div class="container grid grid-2" style="align-items:start">
+        <div>
+          <div class="section-head" style="margin-bottom:24px"><span class="eyebrow">Find us</span><h2>Location</h2></div>
+          <div class="map"><iframe title="Gym location map" loading="lazy" src="https://www.google.com/maps?q=Dynamic+Dumbbells+Gym,+86/1B+Natha+Thottam,+Kovai+Hills,+Perur+Chettipalayam,+Coimbatore+641010&output=embed"></iframe></div>
+        </div>
+        <div>
+          <div class="section-head" style="margin-bottom:24px"><span class="eyebrow">FAQ</span><h2>Questions</h2></div>
+          <details><summary>Do you have a separate space for women?</summary><p>Yes — Dynamic Diva is our dedicated women's fitness studio with ladies-only programs and group classes.</p></details>
+          <details><summary>What are your timings?</summary><p>Monday to Saturday, 5:00 AM – 12:00 PM and 4:30 PM – 9:00 PM. Call us for holiday timings.</p></details>
+          <details><summary>Can I try before joining?</summary><p>Yes — book a free trial on the home page and get a free assessment and workout.</p></details>
+          <details><summary>Is personal training included in membership?</summary><p>PT is a separate add-on. Half-yearly and yearly members get free PT sessions included.</p></details>
+          <details><summary>I'm a complete beginner. Is that okay?</summary><p>Absolutely. Floor trainers will teach you the basics and we run a dedicated beginner batch.</p></details>
+          <details><summary>Can I freeze my membership?</summary><p>Quarterly and longer plans can be paused for travel or medical reasons — ask at the front desk.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
